@@ -19,6 +19,9 @@ Watch out!
 ## Installation
 
     pip install flask_restful
+    git clone https://github.com/stgm/rester.git
+    cd rester
+    python rester.py
 
 ## Example data
 
