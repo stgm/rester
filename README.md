@@ -14,14 +14,13 @@ Watch out!
 
 ## Usage
 
-    python rester.py
+    FLASK_APP=rester.py flask run
 
 ## Installation
 
     pip install flask_restful
     git clone https://github.com/stgm/rester.git
     cd rester
-    FLASK_APP=rester.py flask run
 
 If running in the [CS50 IDE](https://cs50.io), make sure that you have enabled public sharing of your web app. In the IDE, go to Sharing -> Application and check the Public checkbox.
 
