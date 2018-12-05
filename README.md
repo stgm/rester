@@ -22,7 +22,7 @@ Watch out!
     git clone https://github.com/stgm/rester.git
     cd rester
 
-If running in the [CS50 IDE](https://cs50.io), make sure that you have enabled public sharing of your web app. In the IDE, go to Sharing -> Application and check the Public checkbox.
+If running in the [CS50 IDE](https://cs50.io), make sure that you have enabled public sharing of your web app. In the IDE, go to Share -> Application and check the Public checkbox.
 
 ## Example data
 
