@@ -34,25 +34,25 @@ The server comes with sample data that is available for querying upon start. Cur
 
 Returns, in JSON, the full data for one list. In case of default data, this might even be an object, as is the case with the example data for `/menu`.
 
-    curl http://127.0.0.1:5000/list
+    curl http://127.0.0.1:8080/list
 
 ### POST /list
 
 Adds a new item to a list. The full item will be returned, with the new item ID filled in. Hence, the item ID should not be specified in the request. Other attributes can be specified using HTTP POST data.
 
-    curl http://localhost:5000/list -d "description=great stuff" -X POST
+    curl http://localhost:8080/list -d "description=great stuff" -X POST
 
 ### GET /list/1
 
 Returns, in JSON, the data for one item in a list.
 
-    curl http://127.0.0.1:5000/list/1
+    curl http://127.0.0.1:8080/list/1
 
 ### DELETE /list/1
 
 Deletes the data for one item in the list. Other item IDs will not be changed.
 
-    curl http://localhost:5000/list/1 -X DELETE
+    curl http://localhost:8080/list/1 -X DELETE
 
 ### PUT /list/1
 
