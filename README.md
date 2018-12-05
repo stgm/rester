@@ -34,7 +34,7 @@ The server comes with sample data that is available for querying upon start. Cur
 
 Returns, in JSON, the full data for one list. In case of default data, this might even be an object, as is the case with the example data for `/menu`.
 
-    curl http://127.0.0.1:8080/list
+    curl http://localhost:8080/list
 
 ### POST /list
 
@@ -46,7 +46,7 @@ Adds a new item to a list. The full item will be returned, with the new item ID 
 
 Returns, in JSON, the data for one item in a list.
 
-    curl http://127.0.0.1:8080/list/1
+    curl http://localhost:8080/list/1
 
 ### DELETE /list/1
 
