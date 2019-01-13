@@ -6,8 +6,6 @@ A generic REST data server based on flask_restful. It can serve data from hardco
 
 Watch out!
 
-- This server does not persist data between runs, so do not use it in production! If killed, the data will be reset to whatever data is hardcoded in the `rester.py` file.
-
 - This server doesn't have any security measures in place, so do not use it in production! In particular, it should be easy to do denial of service attacks by dumping large data through several POST requests. This data will be saved into local working memory.
 
 - This server isn't safe for handling multiple requests at the same time, so do not use it in production!
@@ -58,7 +56,3 @@ Deletes the data for one item in the list. Other item IDs will not be changed.
 
 Amends the data for one item in the list. Newly attached data will be merged in and so will not delete existing data.
 
-
-## Hardcoding data
-
-The `DATA` variable contains all data that's in the server by default. In line with JSON standards, this can be filled with lists (arrays) or dictionaries (objects). Refer to the example data atop the `rester.py` code to learn more.
