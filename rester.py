@@ -14,9 +14,6 @@ if not os.path.exists(DATABASE):
 def close_connection(exception):
     close_db()
 
-# parser = reqparse.RequestParser()
-# parser.add_argument('task')
-
 def abort_item(list_id, item_id):
     abort(404, message=f"Item {item_id} doesn't exist in list {list_id}")
 
@@ -69,9 +66,15 @@ class List(Resource):
 
         # get all items in this list
         data = query_db("select item_id, data from data where list = ?", [list_id])
+        objects = [ { "id": item['item_id'], **json.loads(item['data']) } for item in data ]
+        
+        search = request.args
         
         # in json, show with id in each item
-        return [ { "id": item['item_id'], **json.loads(item['data']) } for item in data ]
+        if search:
+            return [ obj for obj in objects if all([ nm in obj and obj[nm] == vl for nm,vl in list(search.items()) ]) ]
+        else:
+            return objects
 
 
     def post(self, list_id):

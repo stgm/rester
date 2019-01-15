@@ -34,6 +34,12 @@ Returns, in JSON, the full data for one list. In case of default data, this migh
 
     curl http://localhost:8080/list
 
+You can also filter the list by adding request parameters:
+
+    curl http://localhost:8080/list?name=jaap
+
+The latter example would only return objects that have the string "jaap" in a field called "name".
+
 ### POST /list
 
 Adds a new item to a list. The full item will be returned, with the new item ID filled in. Hence, the item ID should not be specified in the request. Other attributes can be specified using HTTP POST data.
